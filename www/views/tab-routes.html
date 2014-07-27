@@ -1,8 +1,8 @@
 <ion-view title="Routes">
   <ion-content class="has-header">
     <ion-list>
-      <ion-item ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/routes/{{friend.id}}">
-        {{friend.name}}
+      <ion-item ng-repeat="route in routes" type="item-text-wrap" href="#/tab/routes/{{route.$$hashKey}}">
+        {{route.route_id}}
       </ion-item>
     </ion-list>
   </ion-content>

@@ -1,8 +1,25 @@
 angular.module('cloudmtd.services', [])
 
+.factory('RouteList', function($http) {
+
+  // allow cors
+  delete $http.defaults.headers.common['X-Requested-With'];
+
+  return {
+    getData : function() {
+      return $http({
+          method: 'GET',
+          url: 'https://developer.cumtd.com/api/v2.2/json/GetRoutes' +
+          '?key=a1918356803e4ac5b605b11d3329f0e8'
+       });
+    }
+  }
+
+});
+
 /**
  * A simple example service that returns some data.
- */
+ 
 .factory('Friends', function() {
   // Might use a resource here that returns a JSON array
 
@@ -23,4 +40,4 @@ angular.module('cloudmtd.services', [])
       return friends[friendId];
     }
   }
-});
+*/
