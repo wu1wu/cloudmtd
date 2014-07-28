@@ -58,7 +58,7 @@ angular.module('cloudmtd', ['ionic', 'cloudmtd.controllers', 'cloudmtd.services'
       }
     })
     .state('tab.routes-detail', {
-      url: '/routes/:routeId',
+      url: '/routes/:routehash',
       views: {
         'tab-routes': {
           templateUrl: 'views/routes-detail.html',
